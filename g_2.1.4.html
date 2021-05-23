@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>국비지원교육과정 교육등록 | 국비닷컴</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="국비지원">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="article:author" content="https://www.facebook.com/">
+  <meta property="article:publisher" content="https://www.facebook.com/">
+  <meta name="twitter:site" content="@gookbi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:creator" content="@gookbi">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/sticky.min.js"></script>
+  <script src="js/function.js"></script>
+</head>
+
+<body data-controller="course-apply">
+  <header class="main-header">
+    <h1 class="logo">
+      <a href="/">Gookbi</a>
+    </h1>
+    <nav class="gnb">
+      <ul>
+        <li>
+          <a href="">교육과정</a>
+        </li>
+        <li>
+          <a href="">지원제도</a>
+        </li>
+        <li>
+          <a href="">기관정보</a>
+        </li>
+        <li>
+          <a href="">정보공유</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="user-links">
+      <li>
+        <a href="">
+          <span>gookbi</span>님
+        </a>
+      </li>
+      <li>
+        <a href="">로그아웃</a>
+      </li>
+      <li>
+        <a href="">마이페이지</a>
+      </li>
+      <li>
+        <a href="">고객센터</a>
+      </li>
+    </ul>
+  </header>
+  <div class="section-hero mono-header">
+    <div class="wrapper">
+      <div class="head">
+        <h2 class="title">교육등록</h2>
+      </div>
+    </div>
+  </div>
+  <main class="page-course-regist" data-trigger="fix-header">
+    <div class="content-container narrow-container">
+      <h3 class="page-sub-title">교육정보</h3>
+      <fieldset class="form-group">
+        <div class="form-row">
+          <div class="form-header">
+            <label for="title">교육과정명</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="title" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>교육지역</p>
+          </div>
+          <div class="form-body">
+            <div class="form-area-block">
+              <div class="area-select">
+                <select class="size-s">
+                  <option>- 시도선택 -</option>
+                  <option>서울시</option>
+                  <option>안천시</option>
+                </select>
+                <select class="size-s">
+                  <option>- 구군명 선택 -</option>
+                  <option>강남구</option>
+                  <option>강동구</option>
+                </select>
+                <button class="btn type-pri" data-size="s" type="button">위치 선택하기</button>
+              </div>
+              <div class="area-detail">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>교육과정</p>
+          </div>
+          <div class="form-body">
+            <div class="form-category-block">
+              <select class="size-s">
+                <option>- 과정선택 -</option>
+                <option>과정1</option>
+                <option>과정2</option>
+              </select>
+              <select class="size-s">
+                <option>- 카테고리 선택 -</option>
+                <option>카테고리1</option>
+                <option>카테고리2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>교육형태</p>
+          </div>
+          <div class="form-body">
+            <div class="form-type-block">
+              <select class="size-s">
+                <option>- 과정선택 -</option>
+                <option>과정1</option>
+                <option>과정2</option>
+              </select>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="period">교육기간</label>
+          </div>
+          <div class="form-body">
+            <div class="form-period-block">
+              <input class="datepicker" type="text">
+              <button class="btn type-pri" data-size="s" type="button">달력</button>
+              <span class="unit">~</span>
+              <input class="datepicker" type="text">
+              <button class="btn type-pri" data-size="s" type="button">달력</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="time">교육시간대</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="time" type="text" value="10:00">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="price">교육비</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="price" type="text" value="100">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>교육수준</p>
+          </div>
+          <div class="form-body">
+            <div class="form-radio-block">
+              <span class="input-radio">
+                <input id="grade-0" type="radio" name="grade" checked="" />
+                <label for="grade-0">초급</label>
+              </span>
+              <span class="input-radio">
+                <input id="grade-1" type="radio" name="grade" />
+                <label for="grade-1">중급</label>
+              </span>
+              <span class="input-radio">
+                <input id="grade-2" type="radio" name="grade" />
+                <label for="grade-2">고급</label>
+              </span>
+            </div>
+            <div class="form-input-block">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="enddate">접수마감일</label>
+          </div>
+          <div class="form-body">
+            <div class="form-period-block">
+              <input class="datepicker" id="enddate" type="text">
+              <button class="btn type-pri" data-size="s" type="button">달력</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="detail">교육상세</label>
+          </div>
+          <div class="form-body">
+            <div class="form-text-block">
+              <div style="display:flex;justify-content:center;align-items:center;height:500px;">에디터 영역</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="file1">사진1</label>
+          </div>
+          <div class="form-body">
+            <div class="form-file-block">
+              <input id="file1" type="file">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="file2">사진2</label>
+          </div>
+          <div class="form-body">
+            <div class="form-file-block">
+              <input id="file2" type="file">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="file3">사진3</label>
+          </div>
+          <div class="form-body">
+            <div class="form-file-block">
+              <input id="file3" type="file">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="file4">사진4</label>
+          </div>
+          <div class="form-body">
+            <div class="form-file-block">
+              <input id="file4" type="file">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <h3 class="page-sub-title">기관정보</h3>
+      <fieldset class="form-group">
+        <div class="form-row">
+          <div class="form-header">
+            <p>아이디</p>
+          </div>
+          <div class="form-body">
+            <p>Gookbi Identification</p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="company">기관명</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="company" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="file-logo">기관로고</label>
+          </div>
+          <div class="form-body">
+            <div class="form-file-block">
+              <input id="file-logo" type="file">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="rep">대표자</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="rep" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="startyear">설립년도</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="startyear" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="manager">담당자명</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="manager" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="tel">전화번호</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="tel" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="fax">팩스번호</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="fax" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="email">이메일</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="email" type="email">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="url">홈페이지</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="url" type="url">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="company-zipcode">주소</label>
+          </div>
+          <div class="form-body">
+            <div class="form-addr-block">
+              <div class="addr-zipcode">
+                <input id="company-zipcode" type="text">
+                <button class="btn type-pri" data-size="s" type="button">주소찾기</button>
+              </div>
+              <div class="addr-detail">
+                <input type="text">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="page-bottom-actions">
+        <button class="btn type-pri" type="button">저장</button>
+        <button class="btn" type="button">취소</button>
+      </div>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="wrapper"></div>
+  </footer>
+  <script>
+    $('.datepicker').each(function() {
+      const self = $(this);
+
+      self.datepicker({
+        dateFormat: 'yy-mm-dd'
+      });
+      self.next('button').on('click', function() {
+        self.datepicker('show');
+      });
+    })
+
+  </script>
+</body>
+
+</html>

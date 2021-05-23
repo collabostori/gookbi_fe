@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>국비지원교육과정 교육신청 | 국비닷컴</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="국비지원">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="article:author" content="https://www.facebook.com/">
+  <meta property="article:publisher" content="https://www.facebook.com/">
+  <meta name="twitter:site" content="@gookbi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:creator" content="@gookbi">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/sticky.min.js"></script>
+  <script src="js/function.js"></script>
+</head>
+
+<body data-controller="course-apply">
+  <header class="main-header">
+    <h1 class="logo">
+      <a href="/">Gookbi</a>
+    </h1>
+    <nav class="gnb">
+      <ul>
+        <li>
+          <a href="">교육과정</a>
+        </li>
+        <li>
+          <a href="">지원제도</a>
+        </li>
+        <li>
+          <a href="">기관정보</a>
+        </li>
+        <li>
+          <a href="">정보공유</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="user-links">
+      <li>
+        <a href="">
+          <span>gookbi</span>님
+        </a>
+      </li>
+      <li>
+        <a href="">로그아웃</a>
+      </li>
+      <li>
+        <a href="">마이페이지</a>
+      </li>
+      <li>
+        <a href="">고객센터</a>
+      </li>
+    </ul>
+  </header>
+  <div class="section-hero mono-header">
+    <div class="wrapper">
+      <div class="head">
+        <h2 class="title">교육신청</h2>
+      </div>
+    </div>
+  </div>
+  <main class="page-course-apply" data-trigger="fix-header">
+    <div class="content-container narrow-container">
+      <h3 class="page-sub-title">기본정보</h3>
+      <fieldset class="form-group">
+        <div class="form-row">
+          <div class="form-header">
+            <p>이름</p>
+          </div>
+          <div class="form-body">
+            <p>홍길동</p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>주민등록번호</p>
+          </div>
+          <div class="form-body">
+            <p>1234567 - 1234567</p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="tel">전화번호</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="tel" type="text" value="02 - 1234 - 1234">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="phone">핸드폰</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="phone" type="text" value="010 - 1234 - 1234">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="email">이메일</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="email" type="email" value="email@email.com">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="zipcode">주소</label>
+          </div>
+          <div class="form-body">
+            <div class="form-addr-block">
+              <div class="addr-zipcode">
+                <input id="zipcode" type="text">
+                <button class="btn type-pri" data-size="s" type="button">주소찾기</button>
+              </div>
+              <div class="addr-detail">
+                <input type="text">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>직업</p>
+          </div>
+          <div class="form-body">
+            <div class="form-radio-block">
+              <span class="input-radio">
+                <input id="job-0" type="radio" name="job" checked="" />
+                <label for="job-0">미취업</label>
+              </span>
+              <span class="input-radio">
+                <input id="job-1" type="radio" name="job" />
+                <label for="job-1">실업</label>
+              </span>
+              <span class="input-radio">
+                <input id="job-2" type="radio" name="job" />
+                <label for="job-2">학생</label>
+              </span>
+              <span class="input-radio">
+                <input id="job-3" type="radio" name="job" />
+                <label for="job-3">재직중</label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>계좌카드 발급여부</p>
+          </div>
+          <div class="form-body">
+            <div class="form-radio-block">
+              <span class="input-radio">
+                <input id="card-0" type="radio" name="card" checked="" />
+                <label for="card-0">예</label>
+              </span>
+              <span class="input-radio">
+                <input id="card-1" type="radio" name="card" />
+                <label for="card-1">아니오</label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <h3 class="page-sub-title">회사정보(재직중인 경우 기재)</h3>
+      <fieldset class="form-group">
+        <div class="form-row">
+          <div class="form-header">
+            <p>현재직업상태</p>
+          </div>
+          <div class="form-body">
+            <div class="form-radio-block">
+              <span class="input-radio">
+                <input id="work-0" type="radio" name="work" checked="" />
+                <label for="work-0">예</label>
+              </span>
+              <span class="input-radio">
+                <input id="work-1" type="radio" name="work" />
+                <label for="work-1">아니오</label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="company">직장명</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="company" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="position">직위</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="position" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="company-tel">전화번호</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="company-tel" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="fax">팩스</label>
+          </div>
+          <div class="form-body">
+            <div class="form-input-block">
+              <input id="fax" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <label for="company-zipcode">주소</label>
+          </div>
+          <div class="form-body">
+            <div class="form-addr-block">
+              <div class="addr-zipcode">
+                <input id="company-zipcode" type="text">
+                <button class="btn type-pri" data-size="s" type="button">주소찾기</button>
+              </div>
+              <div class="addr-detail">
+                <input type="text">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>고용보험가입여부</p>
+          </div>
+          <div class="form-body">
+            <div class="form-radio-block">
+              <span class="input-radio">
+                <input id="insurance-0" type="radio" name="insurance" checked="" />
+                <label for="insurance-0">가입</label>
+              </span>
+              <span class="input-radio">
+                <input id="insurance-1" type="radio" name="insurance" />
+                <label for="insurance-1">미가입</label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-header">
+            <p>개산보험료 신고인원</p>
+          </div>
+          <div class="form-body">
+            <div class="form-employees-block">
+              <input id="employees" type="text">명
+              <span>(개산보험료 신고인원이란 : 본사와 지사 등을 포함한 전체 상시인원 수 )</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="page-bottom-actions">
+        <button class="btn type-pri" type="button">저장</button>
+      </div>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="wrapper"></div>
+  </footer>
+</body>
+
+</html>

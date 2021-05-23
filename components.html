@@ -26,10 +26,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/sticky.min.js"></script>
   <script src="js/function.js"></script>
   <style>
     h3 {
@@ -92,11 +95,11 @@
       </div>
     </div>
   </div>
-  <main class="page-components" data-bgcolor="invert">
+  <main class="page-components" data-trigger="fix-header">
     <div class="content-container">
-      <h3 class="section-title">List 1</h3>
+      <h3>List 1</h3>
       <ul class="list-type-1">
-        <li>
+        <li class="list-item">
           <a href="">
             <figure class="thumb">
               <img src="./img/temp/list_1_sample_1.jpg" alt="" />
@@ -109,7 +112,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="list-item">
           <a href="">
             <figure class="thumb">
               <img src="./img/temp/list_1_sample_2.jpg" alt="" />
@@ -122,7 +125,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="list-item">
           <a href="">
             <figure class="thumb">
               <img src="./img/temp/list_1_sample_3.jpg" alt="" />
@@ -136,7 +139,49 @@
           </a>
         </li>
       </ul>
-      <h3 class="section-title">List 2</h3>
+      <h3>List 1-1</h3>
+      <ul class="list-type-1-1">
+        <li class="list-item">
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_1_1_sample_1.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="name">하이미디어 아카데미 컴퓨터학원</p>
+              <p class="addr">서울특별시 마포구</p>
+              <div class="site">www.himedia.co.kr</div>
+              <div class="tel">02-0000-0000</div>
+            </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_1_1_sample_1.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="name">하이미디어 아카데미 컴퓨터학원</p>
+              <p class="addr">서울특별시 마포구</p>
+              <div class="site">www.himedia.co.kr</div>
+              <div class="tel">02-0000-0000</div>
+            </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_1_1_sample_1.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="name">하이미디어 아카데미 컴퓨터학원</p>
+              <p class="addr">서울특별시 마포구</p>
+              <div class="site">www.himedia.co.kr</div>
+              <div class="tel">02-0000-0000</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <h3>List 2</h3>
       <ul class="list-type-2">
         <li>
           <a href="">
@@ -191,7 +236,62 @@
           </a>
         </li>
       </ul>
-      <h3 class="section-title">List 3</h3>
+      <h3>List 2-1</h3>
+      <ul class="list-type-2" data-size="s">
+        <li>
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_2_sample_1.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
+              <p class="name">하이미디어 컴퓨터학원</p>
+              <div class="tags">웹·제품·출판 디자인</div>
+              <div class="period">03-01 ~ 03-31</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_2_sample_2.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
+              <p class="name">하이미디어 컴퓨터학원</p>
+              <div class="tags">웹·제품·출판 디자인</div>
+              <div class="period">03-01 ~ 03-31</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_2_sample_3.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
+              <p class="name">하이미디어 컴퓨터학원</p>
+              <div class="tags">웹·제품·출판 디자인</div>
+              <div class="period">03-01 ~ 03-31</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <figure class="thumb">
+              <img src="./img/temp/list_2_sample_4.jpg" alt="" />
+            </figure>
+            <div class="detail">
+              <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
+              <p class="name">하이미디어 컴퓨터학원</p>
+              <div class="tags">웹·제품·출판 디자인</div>
+              <div class="period">03-01 ~ 03-31</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <h3>List 3</h3>
       <ul class="list-type-3">
         <li>
           <a href="">
@@ -229,7 +329,7 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
@@ -271,7 +371,7 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
@@ -313,7 +413,7 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
@@ -355,7 +455,7 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
@@ -397,7 +497,7 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
@@ -439,14 +539,14 @@
               <div class="cell" data-size="s">
                 <dt>마감일</dt>
                 <dd>
-                  <p>03-18</p>
+                  <p class="enddate">03-18</p>
                 </dd>
               </div>
             </dl>
           </a>
         </li>
       </ul>
-      <h3 class="section-title">List 4</h3>
+      <h3>List 4</h3>
       <ul class="list-type-4">
         <li>
           <a href="">
@@ -521,63 +621,73 @@
           </a>
         </li>
       </ul>
-      <h3 class="section-title">List 5</h3>
-      <dl class="list-type-5">
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
+      <h3>List 5</h3>
+      <div class="list-row">
+        <div class="list-column">
+          <dl class="list-type-5">
+            <div class="cell">
+              <dt>카테고리</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>형태</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>기간</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>교육시간</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
+        <div class="list-column">
+          <dl class="list-type-5">
+            <div class="cell">
+              <dt>카테고리</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>형태</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>기간</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+            <div class="cell">
+              <dt>교육시간</dt>
+              <dd>
+                <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-        <div class="cell">
-          <dt>1</dt>
-          <dd>
-            <a href="">서울-경기 지역 홍보 인터뷰 서비스 시작~</a>
-          </dd>
-        </div>
-      </dl>
-      <h3 class="section-title">List 5 / image</h3>
+      </div>
+      <h3>List 5 / image</h3>
       <div class="list5-block">
         <figure class="img">
-          <img src="./img/temp/list_block.jpg" alt="">
+          <div class="frame">
+            <img src="./img/temp/list_block.jpg" alt="">
+          </div>
         </figure>
-        <dl class="list-type-5" type-full="true">
+        <dl class="list-type-5">
           <div class="cell">
             <dt>기관명</dt>
             <dd>
@@ -610,9 +720,16 @@
           </div>
         </dl>
       </div>
-      <h3 class="section-title">Form</h3>
+      <h3>Form</h3>
       <h4>Select</h4>
       <select>
+        <option>셀렉트</option>
+        <option>항목1</option>
+        <option>항목2</option>
+      </select>
+      <br>
+      <br>
+      <select class="size-s">
         <option>셀렉트</option>
         <option>항목1</option>
         <option>항목2</option>
@@ -621,10 +738,22 @@
       <div class="tab">
         <ul>
           <li>
-            <a class="tab-item on" href="">항목1</a>
+            <a class="tab-item on" href="#item1">항목1</a>
           </li>
           <li>
-            <a class="tab-item" href="">항목2</a>
+            <a class="tab-item" href="#item2">항목2</a>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <div class="btn-tab type-full">
+        <ul>
+          <li>
+            <a class="tab-item on" href="#item1">항목1</a>
+          </li>
+          <li>
+            <a class="tab-item" href="#item2">항목2</a>
           </li>
         </ul>
       </div>
@@ -634,8 +763,20 @@
       <button class="btn type-state" type="button">버튼</button>
       <button class="btn type-grey" type="button">버튼</button>
       <button class="btn" type="button">버튼</button>
+      <button class="btn type-trans" type="button">버튼</button>
+      <br>
+      <br>
+      <button class="btn type-pri" data-size="s" type="button">버튼</button>
+      <button class="btn type-sec" data-size="s" type="button">버튼</button>
+      <button class="btn type-state" data-size="s" type="button">버튼</button>
+      <button class="btn type-grey" data-size="s" type="button">버튼</button>
+      <button class="btn" data-size="s" type="button">버튼</button>
+      <button class="btn type-trans" data-size="s" type="button">버튼</button>
       <h4>Input</h4>
       <input type="text">
+      <br>
+      <br>
+      <input type="text" data-size="s">
       <h4>Radio</h4>
       <span class="input-radio">
         <input id="radio-0" type="radio" name="radio" checked="" />
@@ -654,6 +795,23 @@
         <input id="undefined-1" type="checkbox" />
         <label for="undefined-1">체크2</label>
       </span>
+      <h4>Paging</h4>
+      <div class="pagination">
+        <a class="first" href="">처음</a>
+        <a class="prev" href="">이전</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">7</a>
+        <a href="">8</a>
+        <a href="">9</a>
+        <a href="">10</a>
+        <a class="next" href="">다음</a>
+        <a class="last" href="">마지막</a>
+      </div>
     </div>
   </main>
   <footer class="main-footer">
