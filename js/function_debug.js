@@ -205,7 +205,7 @@ gb.controller.main = function () {
     const items = $('.premium-course .swiper-slide');
 
     for (let i = 0; i < 5; i++) {
-      const slides = i < 3 ? items.clone() : items.clone().get().reverse();
+      let slides = i < 3 ? items.clone() : items.clone().get().reverse();
 
       slides = $(slides)
       slides.wrapAll('<div class="swiper-container"><div class="swiper-wrapper"></div></div>');
@@ -269,7 +269,7 @@ gb.controller.main = function () {
 
 
   // 프리미엄, 그랜드 교육 제목 스크롤 고정
-  new Sticky('.course-wrapper .header');
+  new Sticky('.course-wrapper .control');
 
   // var win = $(window);
   // var headers = $('.premium-course .header, .grand-course .header');

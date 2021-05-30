@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>전체 검색 결과 | 국비닷컴</title>
+  <title>대시보드 | 마이페이지 | 국비닷컴</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
   <script src="js/function.js"></script>
 </head>
 
-<body data-controller="search">
+<body data-controller="course-detail">
   <header class="main-header">
     <h1 class="logo">
       <a href="/">Gookbi</a>
@@ -74,46 +74,80 @@
       </li>
     </ul>
   </header>
-  <div class="section-hero total-searched">
+  <div class="section-hero mypage-header">
     <video class="bg-video" src="./img/video/bg_video.mp4" autobuffer preload playsinline muted loop autoplay></video>
     <div class="wrapper">
-      <h2 class="title">
-        <mark class="keyword">파이썬</mark>검색 키워드로<span class="count">9</span>개의 교육정보가 검색되었습니다.
-      </h2>
-      <div class="advanced-search type-white">
-        <h3>상세검색</h3>
-        <div class="form">
-          <div class="addr">
-            <select>
-              <option>시도선택</option>
-              <option>서울</option>
-              <option>경기</option>
-              <option>부산</option>
-            </select>
-            <select>
-              <option>구군명선택</option>
-              <option>강남구</option>
-              <option>강북구</option>
-              <option>강서구</option>
-              <option>강동구</option>
-            </select>
-          </div>
-          <div class="course">
-            <select>
-              <option>카테고리선택</option>
-              <option>프로그래밍 IT</option>
-              <option>병원,서비스,복지</option>
-              <option>영어,일어,중국어</option>
-            </select>
-            <input type="text">
-          </div>
-          <button class="submit" type="submit">검색</button>
-        </div>
-      </div>
+      <h2 class="title">마이페이지</h2>
     </div>
   </div>
-  <main class="page-searched" data-trigger="fix-header">
+  <main class="page-my" data-trigger="fix-header">
     <div class="content-container">
+      <div class="tab">
+        <ul>
+          <li>
+            <a class="tab-item on" href="##">대시보드</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">정보수정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">교육신청내역</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">맞춤교육정보</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">찜한교육정보</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">추천교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">취업문의/내역</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">회원탈퇴</a>
+          </li>
+        </ul>
+      </div>
+      <h3 class="mypage-greeting">
+        <em>홍길동</em>
+
+        회원님 환영합니다.
+      </h3>
+      <div class="list-row">
+        <div class="list-column">
+          <dl class="list-type-5">
+            <div class="cell">
+              <dt>아이디</dt>
+              <dd>abcdefg</dd>
+            </div>
+            <div class="cell">
+              <dt>일반전화</dt>
+              <dd>02-0000-0000</dd>
+            </div>
+            <div class="cell">
+              <dt>휴대전화</dt>
+              <dd>010-0000-0000</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="list-column">
+          <dl class="list-type-5">
+            <div class="cell">
+              <dt>이메일</dt>
+              <dd>email@email.com</dd>
+            </div>
+            <div class="cell multiline">
+              <dt>주소</dt>
+              <dd>서울시 종로구 종로동 123-456
+                <br />종로 빌딩 789
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <h3 class="page-sub-title">온라인 교육 신청 현황</h3>
       <ul class="list-type-3">
         <li>
           <a href="">
@@ -368,114 +402,6 @@
           </a>
         </li>
       </ul>
-      <div class="pagination">
-        <a class="first" href="">처음</a>
-        <a class="prev" href="">이전</a>
-        <a href="">1</a>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">4</a>
-        <a href="">5</a>
-        <a href="">6</a>
-        <a href="">7</a>
-        <a href="">8</a>
-        <a href="">9</a>
-        <a href="">10</a>
-        <a class="next" href="">다음</a>
-        <a class="last" href="">마지막</a>
-      </div>
-      <section class="section">
-        <h2 class="section-title">
-          <em>Premium</em>
-          교육
-        </h2>
-        <div class="section-swiper">
-          <div class="nav">
-            <button class="btn-prev" type="button">이전</button>
-            <button class="btn-next" type="button">다음</button>
-          </div>
-          <ul class="list-type-1">
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_1.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_2.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_3.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_1.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_2.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-            <li class="list-item">
-              <a href="">
-                <figure class="thumb">
-                  <img src="./img/temp/list_1_sample_3.jpg" alt="" />
-                </figure>
-                <p class="title">스마트기기 UX/UI디자인(반응형 웹디자인) 국비취업무료 양성과정</p>
-                <div class="detail">
-                  <p class="name">하이미디어 컴퓨터학원</p>
-                  <div class="tags">웹·제품·출판 디자인</div>
-                  <div class="period">03-01 ~ 03-31</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
     </div>
   </main>
   <footer class="main-footer">

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>개인회원가입 | 국비닷컴</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="국비지원">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="article:author" content="https://www.facebook.com/">
+  <meta property="article:publisher" content="https://www.facebook.com/">
+  <meta name="twitter:site" content="@gookbi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:creator" content="@gookbi">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;family=Roboto+Slab:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/sticky.min.js"></script>
+  <script src="js/function.js"></script>
+</head>
+
+<body data-controller="form login">
+  <main class="layout-form page-signup">
+    <div class="content-container form-container">
+      <h1 class="form-logo">
+        <a href="/">Gookbi</a>
+      </h1>
+      <div class="form-wrapper">
+        <h2 class="form-title">개인회원가입</h2>
+        <h3 class="form-subtitle">기본정보</h3>
+        <fieldset class="form-group">
+          <div class="form-row">
+            <div class="form-header">
+              <label for="name">이름</label>
+            </div>
+            <div class="form-body">
+              <div class="input-small-block">
+                <input id="name" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="id">아이디</label>
+            </div>
+            <div class="form-body">
+              <div class="input-small-block">
+                <input id="id" type="text">
+                <button class="btn type-pri" data-size="s" type="button">중복확인</button>
+                <span class="info">(영문/숫자 조합 4~10자)</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="pw">비밀번호</label>
+            </div>
+            <div class="form-body">
+              <div class="input-small-block">
+                <input id="pw" type="password">
+                <span class="info">(4~10자 영문,숫자만 가능)</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="re-pw">비밀번호 확인</label>
+            </div>
+            <div class="form-body">
+              <div class="input-small-block">
+                <input id="re-pw" type="password">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="email">이메일</label>
+            </div>
+            <div class="form-body">
+              <div class="input-full-block">
+                <input id="email" type="email">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="tel">일반전화</label>
+            </div>
+            <div class="form-body">
+              <div class="input-full-block">
+                <input id="tel" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="phone">휴대전화</label>
+            </div>
+            <div class="form-body">
+              <div class="input-full-block">
+                <input id="phone" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <label for="company-zipcode">주소</label>
+            </div>
+            <div class="form-body">
+              <div class="input-addr-block">
+                <div class="input-small-block">
+                  <input id="company-zipcode" type="text">
+                  <button class="btn type-pri" data-size="s" type="button">주소찾기</button>
+                </div>
+                <div class="input-full-block">
+                  <input type="text">
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <p>관심분야</p>
+            </div>
+            <div class="form-body">
+              <div class="input-radio-block">
+                <span class="input-chk">
+                  <input id="category-0" type="checkbox" />
+                  <label for="category-0">프로그래밍 IT</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-1" type="checkbox" />
+                  <label for="category-1">디자인</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-2" type="checkbox" />
+                  <label for="category-2">토목,건축</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-3" type="checkbox" />
+                  <label for="category-3">외국어</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-4" type="checkbox" />
+                  <label for="category-4">서비스.복지</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-5" type="checkbox" />
+                  <label for="category-5">경영.회계.사무</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-6" type="checkbox" />
+                  <label for="category-6">스튜어디스.여행</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-7" type="checkbox" />
+                  <label for="category-7">웨딩플래너.결혼</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-8" type="checkbox" />
+                  <label for="category-8">요리.바리스타</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-9" type="checkbox" />
+                  <label for="category-9">기계.운전</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-10" type="checkbox" />
+                  <label for="category-10">교육.연구</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-11" type="checkbox" />
+                  <label for="category-11">산업안전.소방.가스</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-12" type="checkbox" />
+                  <label for="category-12">농업.원예.어업</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-13" type="checkbox" />
+                  <label for="category-13">헤어.메이크업.코디</label>
+                </span>
+                <span class="input-chk">
+                  <input id="category-14" type="checkbox" />
+                  <label for="category-14">전기.전자</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <p>관심제도</p>
+            </div>
+            <div class="form-body">
+              <div class="input-radio-block">
+                <span class="input-chk">
+                  <input id="course-0" type="checkbox" />
+                  <label for="course-0">미취업자 무료교육</label>
+                </span>
+                <span class="input-chk">
+                  <input id="course-1" type="checkbox" />
+                  <label for="course-1">계좌제 취업교육</label>
+                </span>
+                <span class="input-chk">
+                  <input id="course-2" type="checkbox" />
+                  <label for="course-2">재직자 환급교육</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-header">
+              <p>가능지역</p>
+            </div>
+            <div class="form-body">
+              <div class="input-radio-block">
+                <span class="input-chk">
+                  <input id="region-0" type="checkbox" />
+                  <label for="region-0">서울</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-1" type="checkbox" />
+                  <label for="region-1">인천</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-2" type="checkbox" />
+                  <label for="region-2">안산</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-3" type="checkbox" />
+                  <label for="region-3">안양</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-4" type="checkbox" />
+                  <label for="region-4">일산</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-5" type="checkbox" />
+                  <label for="region-5">분당</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-6" type="checkbox" />
+                  <label for="region-6">부산</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-7" type="checkbox" />
+                  <label for="region-7">대구</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-8" type="checkbox" />
+                  <label for="region-8">대전</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-9" type="checkbox" />
+                  <label for="region-9">천안</label>
+                </span>
+                <span class="input-chk">
+                  <input id="region-10" type="checkbox" />
+                  <label for="region-10">원주</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="signup-btns">
+          <button class="btn type-pri" type="button">확인</button>
+          <button class="btn type-sec" type="button">취소</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
