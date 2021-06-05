@@ -208,8 +208,8 @@ gb.controller.main = function () {
       let slides = i < 3 ? items.clone() : items.clone().get().reverse();
 
       slides = $(slides)
-      slides.wrapAll('<div class="swiper-container"><div class="swiper-wrapper"></div></div>');
-      slides = slides.closest('.swiper-container');
+      slides.wrapAll('<div class="swiper-block"><div class="swiper-container"><div class="swiper-wrapper"></div></div></div>');
+      slides = slides.closest('.swiper-block');
 
       if (i === 0) {
         slides.addClass('swiper-top');
@@ -253,8 +253,38 @@ gb.controller.main = function () {
     });
   }
 
+  function setSize(curBox, img) {
+    var iWidth = img.naturalWidth;
+    var iHeight = img.naturalHeight;
+    var hRatio = curBox.offsetWidth / iWidth;
+    var vRatio = curBox.offsetHeight / iHeight;
+
+    var max = Math.max(hRatio, vRatio);
+
+    img.width = iWidth * max;
+    img.height = iHeight * max;
+  };
+
+  function setSwiperImgSize () {
+    var imgBox = document.querySelectorAll('.premium-course .thumb');
+
+    for (var i = 0; i < imgBox.length; i++) {
+      (function (i) {
+        var curBox = imgBox[i];
+        var img = curBox.querySelector('img');
+        img.onload = function () {
+          setSize(curBox, img);
+        };
+        setSize(curBox, img);
+      })(i);
+    }
+  };
+
   buildPremiumSwiper();
+  setSwiperImgSize();
   initPremiumSwiper();
+
+  $(window).on('resize', setSwiperImgSize);
 
 
   // 그랜드 교육 슬라이드
