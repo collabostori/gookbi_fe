@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>국비지원교육과정 교육등록 | 국비닷컴</title>
+  <title>교육과정등록 | 마이페이지 | 국비닷컴</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
   <script src="js/function.js"></script>
 </head>
 
-<body data-controller="course-regist">
+<body data-controller="my-c-regist">
   <header class="main-header">
     <h1 class="logo">
       <a href="/">Gookbi</a>
@@ -74,15 +74,193 @@
       </li>
     </ul>
   </header>
-  <div class="section-hero mono-header">
+  <div class="section-hero mypage-header">
+    <video class="bg-video" src="./img/video/bg_video.mp4" autobuffer preload playsinline muted loop autoplay></video>
     <div class="wrapper">
-      <div class="head">
-        <h2 class="title">교육정보수정</h2>
-      </div>
+      <h2 class="title">마이페이지</h2>
     </div>
   </div>
-  <main class="page-course-regist" data-trigger="fix-header">
-    <div class="content-container narrow-container">
+  <main class="page-my-c-regist" data-trigger="fix-header">
+    <div class="content-container">
+      <div class="tab">
+        <ul>
+          <li>
+            <a class="tab-item" href="##">대시보드</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">정보수정</a>
+          </li>
+          <li>
+            <a class="tab-item on" href="##">교육과정등록</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">모집중인교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">마감된교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">유료서비스내역</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">교육신청자</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">회원탈퇴</a>
+          </li>
+        </ul>
+      </div>
+      <h3 class="page-sub-title">모집중인 교육과정</h3>
+      <div class="list-wrapper">
+        <ul class="list-type-4">
+          <li>
+            <dl>
+              <div class="cell service">
+                <dt>서비스명</dt>
+                <dd>
+                  <span class="input-chk">
+                    <input id="banner-0" type="checkbox" />
+                    <label for="banner-0">배너광고</label>
+                  </span>
+                </dd>
+              </div>
+              <div class="cell type">
+                <dt>노출형태</dt>
+                <dd>
+                  <ul class="condition">
+                    <li>메인배너광고에 노출됨</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="cell price">
+                <dt>노출일수 / 가격</dt>
+                <dd>
+                  <ul class="plans">
+                    <li>10일 - 200,000원</li>
+                    <li>1개월 - 500,000원</li>
+                    <li>3개월 - 1,200,000원</li>
+                    <li>6개월 - 2,000,000원</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <div class="cell service">
+                <dt>서비스명</dt>
+                <dd>
+                  <span class="input-chk">
+                    <input id="premium-0" type="checkbox" />
+                    <label for="premium-0">프리미엄 광고</label>
+                  </span>
+                </dd>
+              </div>
+              <div class="cell type">
+                <dt>노출형태</dt>
+                <dd>
+                  <ul class="condition">
+                    <li>메인페이지에 상단에 노출됨</li>
+                    <li>교육과정 페이지 상단에 노출됨</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="cell price">
+                <dt>노출일수 / 가격</dt>
+                <dd>
+                  <ul class="plans">
+                    <li>10일 - 100,000원</li>
+                    <li>1개월 - 240,000원</li>
+                    <li>3개월 - 630,000원</li>
+                    <li>6개월 - 900,000원</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <div class="cell service">
+                <dt>서비스명</dt>
+                <dd>
+                  <span class="input-chk">
+                    <input id="grand-0" type="checkbox" />
+                    <label for="grand-0">그랜드 광고</label>
+                  </span>
+                </dd>
+              </div>
+              <div class="cell type">
+                <dt>노출형태</dt>
+                <dd>
+                  <ul class="condition">
+                    <li>메인페이지에 중단에 노출됨</li>
+                    <li>교육과정 페이지 중단에 노출됨</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="cell price">
+                <dt>노출일수 / 가격</dt>
+                <dd>
+                  <ul class="plans">
+                    <li>10일 - 80,000원</li>
+                    <li>1개월 - 192,000원</li>
+                    <li>3개월 - 504,000원</li>
+                    <li>6개월 - 720,000원</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <div class="cell service">
+                <dt>서비스명</dt>
+                <dd>
+                  <span class="input-chk">
+                    <input id="basic-0" type="checkbox" />
+                    <label for="basic-0">일반 교육과정</label>
+                  </span>
+                </dd>
+              </div>
+              <div class="cell type">
+                <dt>노출형태</dt>
+                <dd>
+                  <ul class="condition">
+                    <li>교육과정 페이지에서 일반목록으로 노출</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="cell price">
+                <dt>노출일수 / 가격</dt>
+                <dd>
+                  <p>무료</p>
+                </dd>
+              </div>
+            </dl>
+          </li>
+        </ul>
+        <div class="actions">
+          <button class="btn type-grey" data-size="s" type="button">교육과정 등록하기</button>
+        </div>
+      </div>
+      <div class="load-registed">
+        <fieldset class="form-group">
+          <div class="form-row">
+            <div class="form-header">
+              <p>최근 등록정보 가져오기</p>
+            </div>
+            <div class="form-body">
+              <div class="form-type-block">
+                <select class="size-s">
+                  <option>셀렉트</option>
+                  <option>셀렉트1</option>
+                  <option>셀렉트2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
       <h3 class="page-sub-title">교육정보</h3>
       <fieldset class="form-group">
         <div class="form-row">

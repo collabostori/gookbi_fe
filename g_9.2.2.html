@@ -36,7 +36,7 @@
   <script src="js/function.js"></script>
 </head>
 
-<body data-controller="my-i-account">
+<body data-controller="my-c-account">
   <header class="main-header">
     <h1 class="logo">
       <a href="/">Gookbi</a>
@@ -80,9 +80,9 @@
       <h2 class="title">마이페이지</h2>
     </div>
   </div>
-  <main class="page-my-i-account" data-trigger="fix-header">
+  <main class="page-my-c-account" data-trigger="fix-header">
     <div class="content-container">
-      <div class="tab type-full">
+      <div class="tab">
         <ul>
           <li>
             <a class="tab-item" href="##">대시보드</a>
@@ -91,10 +91,19 @@
             <a class="tab-item on" href="##">정보수정</a>
           </li>
           <li>
-            <a class="tab-item" href="##">교육신청내역</a>
+            <a class="tab-item" href="##">교육과정등록</a>
           </li>
           <li>
-            <a class="tab-item" href="##">찜한교육정보</a>
+            <a class="tab-item" href="##">모집중인교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">마감된교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">유료서비스내역</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">교육신청자</a>
           </li>
           <li>
             <a class="tab-item" href="##">회원탈퇴</a>
@@ -117,7 +126,7 @@
             </div>
             <div class="form-row">
               <div class="form-header">
-                <label for="name">이름</label>
+                <label for="name">기관명</label>
               </div>
               <div class="form-body">
                 <div class="form-input-block">
@@ -133,6 +142,7 @@
                 <div class="form-input-block">
                   <input id="pw" type="password">
                 </div>
+                <span class="info">(4~10자 영문,숫자만 가능)</span>
               </div>
             </div>
             <div class="form-row">
@@ -145,6 +155,30 @@
                 </div>
               </div>
             </div>
+            <div class="form-row">
+              <div class="form-header">
+                <p>담당자</p>
+              </div>
+              <div class="form-body">
+                <p>
+                  <em>ididididididididid</em>
+                </p>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-header">
+                <label for="reg-num">사업자등록번호</label>
+              </div>
+              <div class="form-body">
+                <div class="form-input-block">
+                  <input id="reg-num" type="text">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="list-column">
+          <fieldset class="form-group">
             <div class="form-row">
               <div class="form-header">
                 <label for="email">이메일</label>
@@ -189,153 +223,6 @@
                     <input type="text">
                     <input type="text">
                   </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="list-column">
-          <fieldset class="form-group">
-            <div class="form-row">
-              <div class="form-header">
-                <p>관심분야</p>
-              </div>
-              <div class="form-body">
-                <div class="form-radio-block">
-                  <span class="input-chk">
-                    <input id="category-0" type="checkbox" />
-                    <label for="category-0">프로그래밍 IT</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-1" type="checkbox" />
-                    <label for="category-1">디자인</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-2" type="checkbox" />
-                    <label for="category-2">토목,건축</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-3" type="checkbox" />
-                    <label for="category-3">외국어</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-4" type="checkbox" />
-                    <label for="category-4">서비스.복지</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-5" type="checkbox" />
-                    <label for="category-5">경영.회계.사무</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-6" type="checkbox" />
-                    <label for="category-6">스튜어디스.여행</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-7" type="checkbox" />
-                    <label for="category-7">웨딩플래너.결혼</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-8" type="checkbox" />
-                    <label for="category-8">요리.바리스타</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-9" type="checkbox" />
-                    <label for="category-9">기계.운전</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-10" type="checkbox" />
-                    <label for="category-10">교육.연구</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-11" type="checkbox" />
-                    <label for="category-11">산업안전.소방.가스</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-12" type="checkbox" />
-                    <label for="category-12">농업.원예.어업</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-13" type="checkbox" />
-                    <label for="category-13">헤어.메이크업.코디</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="category-14" type="checkbox" />
-                    <label for="category-14">전기.전자</label>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-header">
-                <p>관심제도</p>
-              </div>
-              <div class="form-body">
-                <div class="form-radio-block">
-                  <span class="input-chk">
-                    <input id="course-0" type="checkbox" />
-                    <label for="course-0">미취업자 무료교육</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="course-1" type="checkbox" />
-                    <label for="course-1">계좌제 취업교육</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="course-2" type="checkbox" />
-                    <label for="course-2">재직자 환급교육</label>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-header">
-                <p>가능지역</p>
-              </div>
-              <div class="form-body">
-                <div class="form-radio-block area-check">
-                  <span class="input-chk">
-                    <input id="region-0" type="checkbox" />
-                    <label for="region-0">서울</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-1" type="checkbox" />
-                    <label for="region-1">인천</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-2" type="checkbox" />
-                    <label for="region-2">안산</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-3" type="checkbox" />
-                    <label for="region-3">안양</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-4" type="checkbox" />
-                    <label for="region-4">일산</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-5" type="checkbox" />
-                    <label for="region-5">분당</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-6" type="checkbox" />
-                    <label for="region-6">부산</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-7" type="checkbox" />
-                    <label for="region-7">대구</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-8" type="checkbox" />
-                    <label for="region-8">대전</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-9" type="checkbox" />
-                    <label for="region-9">천안</label>
-                  </span>
-                  <span class="input-chk">
-                    <input id="region-10" type="checkbox" />
-                    <label for="region-10">원주</label>
-                  </span>
                 </div>
               </div>
             </div>

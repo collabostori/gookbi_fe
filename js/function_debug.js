@@ -73,6 +73,21 @@ gb.controller.common = function () {
 
   // selectric
   $('select').selectric();
+
+
+  // layer
+  $('[data-layer-btn]').on('click', function() {
+    const target = $(this).attr('href');
+
+    if (target) {
+      $(target).addClass('on');
+    }
+  });
+
+  $('[data-layer-close').on('click', function() {
+    $(this).closest('.layer').removeClass('on');
+  });
+
 };
 
 gb.controller.company = function () {
@@ -145,6 +160,10 @@ gb.controller.courseDetail = function () {
         break;
       }
     }
+  });
+
+  $('[data-share-btn]').on('click', function() {
+    $('.share-box').toggleClass('on');
   });
 };
 

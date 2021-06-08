@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>회원탈퇴 | 마이페이지 | 국비닷컴</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="국비지원">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="article:author" content="https://www.facebook.com/">
+  <meta property="article:publisher" content="https://www.facebook.com/">
+  <meta name="twitter:site" content="@gookbi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:creator" content="@gookbi">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;family=Roboto+Slab:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/sticky.min.js"></script>
+  <script src="js/function.js"></script>
+</head>
+
+<body data-controller="my-c-close">
+  <header class="main-header">
+    <h1 class="logo">
+      <a href="/">Gookbi</a>
+    </h1>
+    <nav class="gnb">
+      <ul>
+        <li>
+          <a href="">교육과정</a>
+        </li>
+        <li>
+          <a href="">지원제도</a>
+        </li>
+        <li>
+          <a href="">기관정보</a>
+        </li>
+        <li>
+          <a href="">정보공유</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="user-links">
+      <li>
+        <a href="">
+          <span>gookbi</span>님
+        </a>
+      </li>
+      <li>
+        <a href="">로그아웃</a>
+      </li>
+      <li>
+        <a href="">마이페이지</a>
+      </li>
+      <li>
+        <a href="">고객센터</a>
+      </li>
+    </ul>
+  </header>
+  <div class="section-hero mypage-header">
+    <video class="bg-video" src="./img/video/bg_video.mp4" autobuffer preload playsinline muted loop autoplay></video>
+    <div class="wrapper">
+      <h2 class="title">마이페이지</h2>
+    </div>
+  </div>
+  <main class="page-my-c-close" data-trigger="fix-header">
+    <div class="content-container">
+      <div class="tab">
+        <ul>
+          <li>
+            <a class="tab-item" href="##">대시보드</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">정보수정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">교육과정등록</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">모집중인교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">마감된교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">유료서비스내역</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">교육신청자</a>
+          </li>
+          <li>
+            <a class="tab-item on" href="##">회원탈퇴</a>
+          </li>
+        </ul>
+      </div>
+      <h3 class="page-sub-title">회원탈퇴</h3>
+      <div class="close-account">
+        <p class="coution-title">회원탈퇴전 아래 내용을 꼭 확인해주세요.</p>
+        <ul class="coution-msg">
+          <li>회원 탈퇴시 개인정보는 완전히 삭제처리 됩니다.</li>
+          <li>회원 탈퇴시 교육신청현황 및 스크랩 정보는 모두 삭제 처리됩니다.</li>
+        </ul>
+        <p class="input-title">개인정보 보호를 위하여 다시한번 아이디 및 패스워드를 입력하여 주시기 바랍니다.</p>
+        <div class="list-row">
+          <div class="list-column">
+            <fieldset class="form-group">
+              <div class="form-row">
+                <div class="form-header">
+                  <label for="id">아이디</label>
+                </div>
+                <div class="form-body">
+                  <div class="form-input-block">
+                    <input id="id" type="text">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="list-column">
+            <fieldset class="form-group">
+              <div class="form-row">
+                <div class="form-header">
+                  <label for="pw">비밀번호 확인</label>
+                </div>
+                <div class="form-body">
+                  <div class="form-input-block">
+                    <input id="pw" type="password">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div class="page-bottom-actions">
+        <button class="btn type-pri" type="button">탈퇴</button>
+        <button class="btn type-grey" type="button">취소</button>
+      </div>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="wrapper">
+      <ul class="footer-links">
+        <li>
+          <a href="">회사소개</a>
+        </li>
+        <li>
+          <a href="">회원약관</a>
+        </li>
+        <li>
+          <a href="">개인보호정책</a>
+        </li>
+      </ul>
+      <div class="footer-info">
+        <p>(주) 잡톡</p>
+        <p>사업자등록번호 837-23-00828</p>
+        <p>서울특별시 서대문구 신촌로 51</p>
+        <p>Email : webmaster@gookbi.com</p>
+      </div>
+      <p class="footer-msg">국비닷컴은 통신중개자이며 당사자 및 주최자가 아닙니다. 따라서 국비닷컴에 등록된 교육과정에 대하여 책임을 지지 않습니다.</p>
+      <p class="footer-copy">Copyright © GOOKBI.COM, All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>교육신청내역 | 마이페이지 | 국비닷컴</title>
+  <title>교육신청자 | 마이페이지 | 국비닷컴</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
   <script src="js/function.js"></script>
 </head>
 
-<body data-controller="my-i-applied">
+<body data-controller="my-c-applicant">
   <header class="main-header">
     <h1 class="logo">
       <a href="/">Gookbi</a>
@@ -80,9 +80,9 @@
       <h2 class="title">마이페이지</h2>
     </div>
   </div>
-  <main class="page-my-i-applied" data-trigger="fix-header">
+  <main class="page-my-c-applicant" data-trigger="fix-header">
     <div class="content-container">
-      <div class="tab type-full">
+      <div class="tab">
         <ul>
           <li>
             <a class="tab-item" href="##">대시보드</a>
@@ -91,24 +91,33 @@
             <a class="tab-item" href="##">정보수정</a>
           </li>
           <li>
-            <a class="tab-item on" href="##">교육신청내역</a>
+            <a class="tab-item" href="##">교육과정등록</a>
           </li>
           <li>
-            <a class="tab-item" href="##">찜한교육정보</a>
+            <a class="tab-item" href="##">모집중인교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">마감된교육과정</a>
+          </li>
+          <li>
+            <a class="tab-item" href="##">유료서비스내역</a>
+          </li>
+          <li>
+            <a class="tab-item on" href="##">교육신청자</a>
           </li>
           <li>
             <a class="tab-item" href="##">회원탈퇴</a>
           </li>
         </ul>
       </div>
-      <h3 class="page-sub-title">교육신청내역</h3>
+      <h3 class="page-sub-title">교육신청자 [총 <span class="count">1</span> 건]</h3>
       <ul class="list-type-4">
         <li>
           <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
+            <div class="cell id">
+              <dt>신청자(아이디)</dt>
               <dd>
-                <p>수원연세직업전문학교학원</p>
+                <p class="ellipsis">홍길동(idididididididi)</p>
               </dd>
             </div>
             <div class="cell title">
@@ -117,38 +126,32 @@
                 <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
               </dd>
             </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
             <div class="cell date">
-              <dt>신청일</dt>
+              <dt>접수일</dt>
               <dd>
                 <p>03-09</p>
               </dd>
             </div>
-            <div class="cell del">
-              <dt>삭제</dt>
+            <div class="cell application">
+              <dt>신청서</dt>
               <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
+                <button class="btn type-grey" data-size="s" type="button">보기</button>
+              </dd>
+            </div>
+            <div class="cell action">
+              <dt>처리</dt>
+              <dd>
+                <button class="btn type-state" data-size="s" type="button">삭제</button>
               </dd>
             </div>
           </dl>
         </li>
         <li>
           <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
+            <div class="cell id">
+              <dt>신청자(아이디)</dt>
               <dd>
-                <p>수원연세직업전문학교학원</p>
+                <p class="ellipsis">홍길동(idididididididi)</p>
               </dd>
             </div>
             <div class="cell title">
@@ -157,38 +160,32 @@
                 <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
               </dd>
             </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
             <div class="cell date">
-              <dt>신청일</dt>
+              <dt>접수일</dt>
               <dd>
                 <p>03-09</p>
               </dd>
             </div>
-            <div class="cell del">
-              <dt>삭제</dt>
+            <div class="cell application">
+              <dt>신청서</dt>
               <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
+                <button class="btn type-grey" data-size="s" type="button">보기</button>
+              </dd>
+            </div>
+            <div class="cell action">
+              <dt>처리</dt>
+              <dd>
+                <button class="btn type-state" data-size="s" type="button">삭제</button>
               </dd>
             </div>
           </dl>
         </li>
         <li>
           <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
+            <div class="cell id">
+              <dt>신청자(아이디)</dt>
               <dd>
-                <p>수원연세직업전문학교학원</p>
+                <p class="ellipsis">홍길동(idididididididi)</p>
               </dd>
             </div>
             <div class="cell title">
@@ -197,28 +194,22 @@
                 <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
               </dd>
             </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
             <div class="cell date">
-              <dt>신청일</dt>
+              <dt>접수일</dt>
               <dd>
                 <p>03-09</p>
               </dd>
             </div>
-            <div class="cell del">
-              <dt>삭제</dt>
+            <div class="cell application">
+              <dt>신청서</dt>
               <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
+                <button class="btn type-grey" data-size="s" type="button">보기</button>
+              </dd>
+            </div>
+            <div class="cell action">
+              <dt>처리</dt>
+              <dd>
+                <button class="btn type-state" data-size="s" type="button">삭제</button>
               </dd>
             </div>
           </dl>
