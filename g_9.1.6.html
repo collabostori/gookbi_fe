@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>찜한교육정보 | 마이페이지 | 국비닷컴</title>
+  <title>회원탈퇴 | 마이페이지 | 국비닷컴</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
   <script src="js/function.js"></script>
 </head>
 
-<body data-controller="my-i-favorite">
+<body data-controller="my-i-close">
   <header class="main-header">
     <h1 class="logo">
       <a href="/">Gookbi</a>
@@ -80,7 +80,7 @@
       <h2 class="title">마이페이지</h2>
     </div>
   </div>
-  <main class="page-my-i-favorite" data-trigger="fix-header">
+  <main class="page-my-i-close" data-trigger="fix-header">
     <div class="content-container">
       <div class="tab-wrapper">
         <div class="tab type-full">
@@ -95,137 +95,57 @@
               <a class="tab-item" href="##">교육신청내역</a>
             </li>
             <li>
-              <a class="tab-item on" href="##">찜한교육정보</a>
+              <a class="tab-item" href="##">찜한교육정보</a>
             </li>
             <li>
-              <a class="tab-item" href="##">회원탈퇴</a>
+              <a class="tab-item on" href="##">회원탈퇴</a>
             </li>
           </ul>
         </div>
       </div>
-      <h3 class="page-sub-title">찜한교육정보</h3>
-      <ul class="list-type-4">
-        <li>
-          <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
-              <dd>
-                <p>수원연세직업전문학교학원</p>
-              </dd>
-            </div>
-            <div class="cell title">
-              <dt>교육과정</dt>
-              <dd>
-                <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
-              </dd>
-            </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
-            <div class="cell date">
-              <dt>마감일</dt>
-              <dd>
-                <p>03-09</p>
-              </dd>
-            </div>
-            <div class="cell del">
-              <dt>삭제</dt>
-              <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
-              </dd>
-            </div>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
-              <dd>
-                <p>수원연세직업전문학교학원</p>
-              </dd>
-            </div>
-            <div class="cell title">
-              <dt>교육과정</dt>
-              <dd>
-                <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
-              </dd>
-            </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
-            <div class="cell date">
-              <dt>마감일</dt>
-              <dd>
-                <p>03-09</p>
-              </dd>
-            </div>
-            <div class="cell del">
-              <dt>삭제</dt>
-              <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
-              </dd>
-            </div>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <div class="cell school">
-              <dt>교육기관</dt>
-              <dd>
-                <p>수원연세직업전문학교학원</p>
-              </dd>
-            </div>
-            <div class="cell title">
-              <dt>교육과정</dt>
-              <dd>
-                <p class="ellipsis">[최우수훈련기관-무료교육]전기자동제어시스템(PLC)과정</p>
-              </dd>
-            </div>
-            <div class="cell period">
-              <dt>교육기간</dt>
-              <dd>
-                <p class="ellipsis">2021-03-03 ~ 2021-03-06</p>
-              </dd>
-            </div>
-            <div class="cell price">
-              <dt>교육비</dt>
-              <dd>
-                <p>999,999원</p>
-              </dd>
-            </div>
-            <div class="cell date">
-              <dt>마감일</dt>
-              <dd>
-                <p>03-09</p>
-              </dd>
-            </div>
-            <div class="cell del">
-              <dt>삭제</dt>
-              <dd>
-                <button class="btn type-grey" data-size="s" type="button">삭제</button>
-              </dd>
-            </div>
-          </dl>
-        </li>
-      </ul>
+      <h3 class="page-sub-title">회원탈퇴</h3>
+      <div class="close-account">
+        <p class="coution-title">회원탈퇴전 아래 내용을 꼭 확인해주세요.</p>
+        <ul class="coution-msg">
+          <li>회원 탈퇴시 개인정보는 완전히 삭제처리 됩니다.</li>
+          <li>회원 탈퇴시 교육신청현황 및 스크랩 정보는 모두 삭제 처리됩니다.</li>
+        </ul>
+        <p class="input-title">개인정보 보호를 위하여 다시한번 아이디 및 패스워드를 입력하여 주시기 바랍니다.</p>
+        <div class="list-row">
+          <div class="list-column">
+            <fieldset class="form-group">
+              <div class="form-row">
+                <div class="form-header">
+                  <label for="id">아이디</label>
+                </div>
+                <div class="form-body">
+                  <div class="form-input-block">
+                    <input id="id" type="text">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="list-column">
+            <fieldset class="form-group">
+              <div class="form-row">
+                <div class="form-header">
+                  <label for="pw">비밀번호 확인</label>
+                </div>
+                <div class="form-body">
+                  <div class="form-input-block">
+                    <input id="pw" type="password">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div class="page-bottom-actions">
+        <button class="btn type-pri" type="button">탈퇴</button>
+        <button class="btn type-grey" type="button">취소</button>
+      </div>
     </div>
   </main>
   <footer class="main-footer">

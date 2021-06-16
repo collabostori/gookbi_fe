@@ -167,6 +167,20 @@ gb.controller.courseDetail = function () {
   });
 };
 
+gb.controller.cs = function () {
+  $('.faq-list').on('click', 'dt', function() {
+    const self = $(this);
+    const parent = self.parent();
+
+    if (parent.hasClass('on')) {
+      parent.removeClass('on');
+    } else {
+      $('.faq-item').removeClass('on');
+      parent.addClass('on');
+    };
+  });
+};
+
 gb.controller.main = function () {
   // 상단 배경 슬라이드
   const heroBgSwiper = new Swiper('.section-hero .bg-swiper', {
