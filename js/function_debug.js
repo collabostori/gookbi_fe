@@ -76,7 +76,9 @@ gb.controller.common = function () {
 
 
   // layer
-  $('[data-layer-btn]').on('click', function() {
+  $('[data-layer-btn]').on('click', function(e) {
+    e.preventDefault();
+
     const target = $(this).attr('href');
 
     if (target) {
@@ -88,6 +90,18 @@ gb.controller.common = function () {
     $(this).closest('.layer').removeClass('on');
   });
 
+
+  /*
+   * Tablet
+   */
+  $('.toggle-menu').on('click', function(e) {
+    $('body').toggleClass('open-menu');
+  });
+  $('.main-header').on('click', function(e) {
+    if ($(e.target).hasClass('main-header')) {
+      $('body').removeClass('open-menu');
+    }
+  })
 };
 
 gb.controller.company = function () {
@@ -97,10 +111,10 @@ gb.controller.company = function () {
     wrapperClass: 'list-type-1-1',
     slideClass: 'list-item',
     slidesPerView: 3,
-    slidesPerGroup: 3,
+    // slidesPerGroup: 3,
     simulateTouch: false,
     loop: true,
-    speed: 2000,
+    speed: 1000,
     navigation: {
       nextEl: '.best-swiper .btn-next',
       prevEl: '.best-swiper .btn-prev',
@@ -115,10 +129,10 @@ gb.controller.course = function () {
     wrapperClass: 'list-type-1',
     slideClass: 'list-item',
     slidesPerView: 3,
-    slidesPerGroup: 3,
+    // slidesPerGroup: 3,
     simulateTouch: false,
     loop: true,
-    speed: 2000,
+    speed: 1000,
     navigation: {
       nextEl: '.premium-swiper .btn-next',
       prevEl: '.premium-swiper .btn-prev',
@@ -332,31 +346,23 @@ gb.controller.main = function () {
 
 
   // 프리미엄, 그랜드 교육 제목 스크롤 고정
-  new Sticky('.course-wrapper .control');
+  let stickedControl;
 
-  // var win = $(window);
-  // var headers = $('.premium-course .header, .grand-course .header');
+  function stickyControl() {
+    if (window.innerWidth > 1400) {
+      if (!stickedControl) {
+        stickedControl = new Sticky('.course-wrapper .control');
+      }
+    } else {
+      stickedControl && stickedControl.destroy();
+      stickedControl = null;
+      $('.course-wrapper .control').removeAttr('style');
+    }
+  }
 
-  // $('.premium-course, .grand-course').each(function(idx, item) {
-  //   var course = $(item);
-  //   var elTop = course.offset().top;
-  //   var pt = 0;
-  //   var max = idx ? 403 : 600;
+  stickyControl();
 
-  //   win.on('scroll', function() {
-  //     var  st = win.scrollTop();
-
-  //     if (st > elTop) {
-  //       pt = st - elTop;
-  //     }
-
-  //     pt = pt < 0 ? 0 : pt;
-  //     pt = pt > max ? max : pt;
-
-  //     headers.eq(idx).css('paddingTop', pt);
-  //   });
-  // });
-
+  $(window).on('resize', stickyControl);
 };
 
 gb.controller.search = function () {
@@ -366,10 +372,10 @@ gb.controller.search = function () {
     wrapperClass: 'list-type-1',
     slideClass: 'list-item',
     slidesPerView: 3,
-    slidesPerGroup: 3,
+    // slidesPerGroup: 3,
     simulateTouch: false,
     loop: true,
-    speed: 2000,
+    speed: 1000,
     navigation: {
       nextEl: '.section-swiper .btn-next',
       prevEl: '.section-swiper .btn-prev',
@@ -387,7 +393,8 @@ $(function() {
   if (controller) {
     controller.split(' ').forEach(function(key) {
       const camelKey = key.replace(/([-_]\w)/g, g => g[1].toUpperCase());
-      const fn = camelKey + (isMobile ? 'Mobile' : '');
+      // const fn = camelKey + (isMobile ? 'Mobile' : '');
+      const fn = camelKey;
 
       gb.controller[fn] && gb.controller[fn]();
     });
