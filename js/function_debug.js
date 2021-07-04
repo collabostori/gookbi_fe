@@ -4,7 +4,7 @@ var gb = {
 };
 
 
-gb.controller.common = function () {
+gb.controller.common = function (isMobile) {
   const $win = $(window);
 
   // IE 스크롤 떨림 제거
@@ -36,7 +36,8 @@ gb.controller.common = function () {
     $win.on('scroll', function () {
       for (var i = triggers.length - 1; i > -1; i--) {
         const colorCode = triggers[i].getAttribute('data-trigger');
-        const triggerPos = triggers[i].getBoundingClientRect().top - 90 <= 0;
+        const triggerPos = triggers[i].getBoundingClientRect().top - (isMobile ? 45 : 90) <= 0;
+        console.log(colorCode, triggers[i].getBoundingClientRect().top)
 
         if (colorCode === 'fix-header' && triggerPos) {
           $body.addClass('fix-header');
@@ -104,7 +105,7 @@ gb.controller.common = function () {
   })
 };
 
-gb.controller.company = function () {
+gb.controller.company = function (isMobile) {
   // best swiper
   new Swiper('.best-swiper', {
     containerModifierClass: 'section-swiper',
@@ -118,11 +119,16 @@ gb.controller.company = function () {
     navigation: {
       nextEl: '.best-swiper .btn-next',
       prevEl: '.best-swiper .btn-prev',
+    },
+    breakpoints: {
+      800: {
+        slidesPerView: 1,
+      }
     }
   });
 };
 
-gb.controller.course = function () {
+gb.controller.course = function (isMobile) {
   // premium swiper
   new Swiper('.premium-swiper', {
     containerModifierClass: 'section-swiper',
@@ -136,6 +142,11 @@ gb.controller.course = function () {
     navigation: {
       nextEl: '.premium-swiper .btn-next',
       prevEl: '.premium-swiper .btn-prev',
+    },
+    breakpoints: {
+      800: {
+        slidesPerView: 1,
+      }
     }
   });
 
@@ -365,7 +376,7 @@ gb.controller.main = function () {
   $(window).on('resize', stickyControl);
 };
 
-gb.controller.search = function () {
+gb.controller.search = function (isMobile) {
   // premium swiper
   new Swiper('.section-swiper', {
     containerModifierClass: 'section-swiper',
@@ -379,6 +390,11 @@ gb.controller.search = function () {
     navigation: {
       nextEl: '.section-swiper .btn-next',
       prevEl: '.section-swiper .btn-prev',
+    },
+    breakpoints: {
+      800: {
+        slidesPerView: 1,
+      }
     }
   });
 };
@@ -388,7 +404,7 @@ $(function() {
   const controller = $body.attr('data-controller');
   const isMobile = window.innerWidth < 800;
 
-  gb.controller.common();
+  gb.controller.common(isMobile);
 
   if (controller) {
     controller.split(' ').forEach(function(key) {
@@ -396,7 +412,7 @@ $(function() {
       // const fn = camelKey + (isMobile ? 'Mobile' : '');
       const fn = camelKey;
 
-      gb.controller[fn] && gb.controller[fn]();
+      gb.controller[fn] && gb.controller[fn](isMobile);
     });
   }
 });
