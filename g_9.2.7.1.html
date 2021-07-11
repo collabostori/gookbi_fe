@@ -31,6 +31,8 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/hammer.min.js"></script>
+  <script src="js/listslider.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/sticky.min.js"></script>
   <script src="js/function.js"></script>
@@ -76,7 +78,9 @@
     <button class="toggle-menu" type="button">메뉴토글</button>
   </header>
   <div class="section-hero mypage-header">
-    <video class="bg-video" src="./img/video/bg_video.mp4" autobuffer preload playsinline muted loop autoplay></video>
+    <div class="bg-video">
+      <video src="./img/video/bg_video.mp4" autobuffer preload playsinline muted loop autoplay></video>
+    </div>
     <div class="wrapper">
       <h2 class="title">마이페이지</h2>
     </div>
@@ -150,7 +154,7 @@
             <div class="cell">
               <dt>주소</dt>
               <dd>
-                <p>서울 특별시 종로구 ...</p>
+                <p>서울 특별시 종로구 서울 특별시 종로구</p>
               </dd>
             </div>
             <div class="cell">
@@ -160,7 +164,9 @@
               </dd>
             </div>
             <div class="cell">
-              <dt>계좌카드발급여부</dt>
+              <dt>계좌카드
+                <br /> 발급여부
+              </dt>
               <dd>
                 <p>아니오</p>
               </dd>
@@ -196,17 +202,21 @@
             <div class="cell">
               <dt>주소</dt>
               <dd>
-                <p>서울시 영등포구 ...</p>
+                <p>서울시 영등포구 서울시 영등포구</p>
               </dd>
             </div>
             <div class="cell">
-              <dt>고용보험 가입여부</dt>
+              <dt>고용보험
+                <br /> 가입여부
+              </dt>
               <dd>
                 <p>미가입</p>
               </dd>
             </div>
             <div class="cell">
-              <dt>개산보험료 신고인원</dt>
+              <dt>개산보험료
+                <br /> 신고인원
+              </dt>
               <dd>
                 <p>0 명</p>
               </dd>

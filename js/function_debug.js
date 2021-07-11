@@ -21,56 +21,38 @@ gb.controller.common = function (isMobile) {
   }
 
   // header 고정
-  $win.on('load', function () {
-    const triggers = $('[data-trigger]').get();
-    const $body = $('body');
+  const triggers = $('[data-trigger]').get();
+  const $body = $('body');
 
-    if (
-      triggers[0] &&
-      triggers[0].getAttribute('data-trigger') === 'fix-header' &&
-      triggers[0].getBoundingClientRect().top <= 0
-    ) {
-      $body.addClass('fix-header');
-    }
+  if (
+    triggers[0] &&
+    triggers[0].getAttribute('data-trigger') === 'fix-header' &&
+    triggers[0].getBoundingClientRect().top <= 0
+  ) {
+    $body.addClass('fix-header');
+  }
 
-    $win.on('scroll', function () {
-      for (var i = triggers.length - 1; i > -1; i--) {
-        const colorCode = triggers[i].getAttribute('data-trigger');
-        const triggerPos = triggers[i].getBoundingClientRect().top - (isMobile ? 45 : 90) <= 0;
-        console.log(colorCode, triggers[i].getBoundingClientRect().top)
+  function fixheader() {
+    for (var i = triggers.length - 1; i > -1; i--) {
+      const colorCode = triggers[i].getAttribute('data-trigger');
+      const triggerPos = triggers[i].getBoundingClientRect().top - (isMobile ? 45 : 90) <= 0;
 
-        if (colorCode === 'fix-header' && triggerPos) {
-          $body.addClass('fix-header');
-          break;
-        } else if (colorCode === 'light' && triggerPos) {
-          $body.removeClass('fix-header');
-          break;
-        }
+      if (colorCode === 'fix-header' && triggerPos) {
+        $body.addClass('fix-header');
+        break;
+      } else if (colorCode === 'light' && triggerPos) {
         $body.removeClass('fix-header');
+        break;
       }
-    });
+      $body.removeClass('fix-header');
+    }
+  }
 
-    // $win.on('scroll', function () {
-    //   if ($win.scrollTop() > 50) {
-    //     $body.addClass('fix-header');
-    //   } else {
-    //     $body.removeClass('fix-header');
-    //   }
-    // });
+  $win.on('scroll', fixheader);
+  $win.on('load resize', function() {
+    $win.off('scroll', fixheader);
+    $win.on('scroll', fixheader);
   });
-
-  // var isHeaderInverted = false;
-  // var $header = $('.main-header');
-
-  // $header.on('mouseenter', function() {
-  //   isHeaderInverted = $('body').hasClass('fix-header');
-  //   $('body').addClass('fix-header');
-  // });
-  // $header.on('mouseleave', function() {
-  //   if (!isHeaderInverted) {
-  //     $('body').removeClass('fix-header');
-  //   }
-  // });
 
   // selectric
   $('select').selectric();
@@ -107,58 +89,68 @@ gb.controller.common = function (isMobile) {
 
 gb.controller.company = function (isMobile) {
   // best swiper
-  new Swiper('.best-swiper', {
-    containerModifierClass: 'section-swiper',
-    wrapperClass: 'list-type-1-1',
-    slideClass: 'list-item',
-    slidesPerView: 3,
-    // slidesPerGroup: 3,
-    simulateTouch: false,
-    loop: true,
-    speed: 1000,
-    navigation: {
-      nextEl: '.best-swiper .btn-next',
-      prevEl: '.best-swiper .btn-prev',
-    },
-    breakpoints: {
-      800: {
-        slidesPerView: 1,
+  if($('.best-swiper .list-item').length > (isMobile ? 1 : 3)) {
+    new Swiper('.best-swiper', {
+      containerModifierClass: 'section-swiper',
+      wrapperClass: 'list-type-1-1',
+      slideClass: 'list-item',
+      slidesPerView: 3,
+      // slidesPerGroup: 3,
+      simulateTouch: false,
+      loop: true,
+      speed: 1000,
+      navigation: {
+        nextEl: '.best-swiper .btn-next',
+        prevEl: '.best-swiper .btn-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        }
       }
-    }
-  });
+    });
+  } else {
+    $('.best-swiper .nav').hide();
+  }
 };
 
 gb.controller.course = function (isMobile) {
   // premium swiper
-  new Swiper('.premium-swiper', {
-    containerModifierClass: 'section-swiper',
-    wrapperClass: 'list-type-1',
-    slideClass: 'list-item',
-    slidesPerView: 3,
-    // slidesPerGroup: 3,
-    simulateTouch: false,
-    loop: true,
-    speed: 1000,
-    navigation: {
-      nextEl: '.premium-swiper .btn-next',
-      prevEl: '.premium-swiper .btn-prev',
-    },
-    breakpoints: {
-      800: {
-        slidesPerView: 1,
+  if($('.premium-swiper .list-item').length > (isMobile ? 1 : 3)) {
+    new Swiper('.premium-swiper', {
+      containerModifierClass: 'section-swiper',
+      wrapperClass: 'list-type-1',
+      slideClass: 'list-item',
+      slidesPerView: 3,
+      // slidesPerGroup: 3,
+      simulateTouch: false,
+      loop: true,
+      speed: 1000,
+      navigation: {
+        nextEl: '.premium-swiper .btn-next',
+        prevEl: '.premium-swiper .btn-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        }
       }
-    }
-  });
+    });
+  } else {
+    $('.premium-swiper .nav').hide();
+  }
 
   // 그랜드 교육 슬라이드
-  new Swiper('.grand-swiper .swiper-container', {
-    navigation: {
-      nextEl: '.grand-swiper .btn-next',
-      prevEl: '.grand-swiper .btn-prev',
-    },
-    loop: true,
-    speed: 2000,
-  });
+  if($('.grand-swiper .list-type-2 li').length > (isMobile ? 2 : 4)) {
+    new ListSlider({
+      el: '.list-slide-container',
+      prevBtn: '.grand-swiper .btn-prev',
+      nextBtn: '.grand-swiper .btn-next',
+      loop: true,
+    });
+  } else {
+    $('.grand-swiper .nav').hide();
+  }
 };
 
 gb.controller.courseDetail = function () {
@@ -206,7 +198,7 @@ gb.controller.cs = function () {
   });
 };
 
-gb.controller.main = function () {
+gb.controller.main = function (isMobile) {
   // 상단 배경 슬라이드
   const heroBgSwiper = new Swiper('.section-hero .bg-swiper', {
     effect: 'fade',
@@ -346,15 +338,16 @@ gb.controller.main = function () {
 
 
   // 그랜드 교육 슬라이드
-  const grandSwiper = new Swiper('.grand-course .swiper-container', {
-    navigation: {
-      nextEl: '.grand-course .list-next',
-      prevEl: '.grand-course .list-prev',
-    },
-    loop: true,
-    speed: 2000,
-  });
-
+  if($('.grand-course .list-type-2 li').length > (isMobile ? 2 : 4)) {
+    new ListSlider({
+      el: '.list-slide-container',
+      prevBtn: '.grand-course .list-prev',
+      nextBtn: '.grand-course .list-next',
+      loop: true,
+    });
+  } else {
+    $('.grand-course .list-nav').hide();
+  }
 
   // 프리미엄, 그랜드 교육 제목 스크롤 고정
   let stickedControl;
@@ -392,7 +385,7 @@ gb.controller.search = function (isMobile) {
       prevEl: '.section-swiper .btn-prev',
     },
     breakpoints: {
-      800: {
+      640: {
         slidesPerView: 1,
       }
     }
