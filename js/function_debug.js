@@ -55,7 +55,7 @@ gb.controller.common = function (isMobile) {
   });
 
   // selectric
-  $('select').selectric();
+  // $('select').selectric();
 
 
   // layer
