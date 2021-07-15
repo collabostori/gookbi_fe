@@ -55,7 +55,13 @@ gb.controller.common = function (isMobile) {
   });
 
   // selectric
-  // $('select').selectric();
+  $('select').selectric({
+    disableOnMobile: false,
+    nativeOnMobile: false,
+    responsive: true,
+  }).on('selectric-change', function(event, element, selectric) {
+    $('select').selectric('refresh');
+  });
 
 
   // layer
