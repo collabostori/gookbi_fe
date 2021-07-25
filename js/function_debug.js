@@ -185,8 +185,17 @@ gb.controller.courseDetail = function () {
     }
   });
 
+  // share btn toggle
   $('[data-share-btn]').on('click', function() {
     $('.share-box').toggleClass('on');
+  });
+  $(document).on('click', function(e){
+    if(!(($(e.target).closest('.share-box').length > 0 ) || ($(e.target).closest('[data-share-btn]').length > 0))) {
+      $('.share-box').removeClass('on');
+    }
+  });
+  $(window).on('scroll', function() {
+    $('.share-box').removeClass('on');
   });
 };
 
