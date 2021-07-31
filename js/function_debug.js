@@ -35,7 +35,7 @@ gb.controller.common = function (isMobile) {
   function fixheader() {
     for (var i = triggers.length - 1; i > -1; i--) {
       const colorCode = triggers[i].getAttribute('data-trigger');
-      const triggerPos = triggers[i].getBoundingClientRect().top - (isMobile ? 45 : 90) <= 0;
+      const triggerPos = triggers[i].getBoundingClientRect().top - (window.innerWidth > 1180 ? 90 : 45) <= 0;
 
       if (colorCode === 'fix-header' && triggerPos) {
         $body.addClass('fix-header');
@@ -361,7 +361,9 @@ gb.controller.main = function (isMobile) {
       loop: true,
     });
   } else {
-    $('.grand-course .list-nav').hide();
+    $('.grand-course .list-nav').css({
+      visibility: 'hidden'
+    });
   }
 
   // 프리미엄, 그랜드 교육 제목 스크롤 고정

@@ -826,6 +826,7 @@ textarea[data-size="s"] {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
+  background-color: #fbfbfb;
 }
 
 .list-type-1 a .thumb img {
@@ -1027,18 +1028,24 @@ textarea[data-size="s"] {
 }
 
 .list-type-2 a:hover .thumb img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: translateX(-50%) scale(1.05);
+          transform: translateX(-50%) scale(1.05);
 }
 
 .list-type-2 a .thumb {
   width: 340px;
   min-width: 340px;
   overflow: hidden;
+  background-color: #fbfbfb;
 }
 
 .list-type-2 a .thumb img {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -1277,6 +1284,10 @@ textarea[data-size="s"] {
 
 .list-type-3 dd .company-info {
   font-size: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .list-type-3 .header {
@@ -1289,6 +1300,7 @@ textarea[data-size="s"] {
   width: 170px;
   height: 100px;
   overflow: hidden;
+  background-color: #fbfbfb;
 }
 
 .list-type-3 .header .thumb img {
@@ -1297,8 +1309,14 @@ textarea[data-size="s"] {
 
 .list-type-3 .header .title {
   margin-top: 4px;
+  height: 4.2em;
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .list-type-3 .header .tags {
@@ -1324,10 +1342,13 @@ textarea[data-size="s"] {
 }
 
 .list-type-3 .company-header .thumb {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-right: 20px;
   width: 150px;
   height: 98px;
   overflow: hidden;
+  background-color: #fbfbfb;
 }
 
 .list-type-3 .company-header .thumb img {
@@ -1339,8 +1360,14 @@ textarea[data-size="s"] {
 }
 
 .list-type-3 .company-header .title {
+  max-height: 4.2em;
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .course-group + .course-group {
@@ -2059,6 +2086,12 @@ select.size-s {
   font-size: 0.9375rem;
 }
 
+.board-article .article-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .terms {
   color: #222;
   font-size: 0.9375rem;
@@ -2177,8 +2210,8 @@ select.size-s {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 13px;
 }
 
@@ -2540,8 +2573,6 @@ select.size-s {
   height: 90px;
   border-bottom: 1px solid #fff;
   z-index: 100;
-  -webkit-transition: background 0.5s cubic-bezier(0.17, 0.67, 0.21, 1);
-  transition: background 0.5s cubic-bezier(0.17, 0.67, 0.21, 1);
 }
 
 .main-header:hover {
@@ -2750,6 +2781,7 @@ body.fix-header .toggle-menu {
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: #000;
   overflow: hidden;
 }
 
@@ -2761,6 +2793,7 @@ body.fix-header .toggle-menu {
   width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  opacity: 0.6;
 }
 
 .page-sub-title {
@@ -3245,6 +3278,7 @@ body.fix-header .toggle-menu {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
+  background-color: #fbfbfb;
 }
 
 .page-main .premium-course .swiper-slide .thumb img {
@@ -3514,11 +3548,12 @@ body.fix-header .toggle-menu {
 
 .page-course-detail .course-detail-info img {
   display: block;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .fix-header .page-course-detail {
-  margin-top: 400px;
+  margin-top: 355px;
 }
 
 .page-support .support1,
@@ -4302,23 +4337,9 @@ body.fix-header .toggle-menu {
 }
 
 @media (max-width: 1400px) {
-  .list-type-2 a:hover .thumb img {
-    -webkit-transform: translateX(-50%) scale(1.05);
-            transform: translateX(-50%) scale(1.05);
-  }
-
   .list-type-2 a .thumb {
     width: 54.5%;
     min-width: 0;
-  }
-
-  .list-type-2 a .thumb img {
-    position: relative;
-    left: 50%;
-    width: auto;
-    height: 100%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 
   .main-header .gnb li + li {
@@ -4458,6 +4479,7 @@ body.fix-header .toggle-menu {
   }
 
   .section-hero.sub-header .actions {
+    bottom: 30px;
     right: 30px;
   }
 
@@ -5085,7 +5107,9 @@ body.fix-header .toggle-menu {
     bottom: -29px;
     left: 0;
     right: 0;
+    display: block;
     margin-top: 0;
+    height: auto;
     padding: 5px 10px 0;
     border-top: 1px solid #d9d9d9;
     white-space: nowrap;
@@ -5113,6 +5137,8 @@ body.fix-header .toggle-menu {
     bottom: -29px;
     left: 0;
     right: 0;
+    display: block;
+    height: auto;
     margin-top: 0;
     padding: 5px 10px 0;
     border-top: 1px solid #d9d9d9;
@@ -5126,17 +5152,22 @@ body.fix-header .toggle-menu {
   }
 
   .list-type-4 li + li {
-    margin-top: -1px;
+    margin-top: 10px;
   }
 
   .list-type-4 dl {
     position: relative;
     display: block;
     border: 1px solid #999;
+    overflow: hidden;
   }
 
   .list-type-4 dl:hover dd {
     background-color: transparent;
+  }
+
+  .list-type-4 .cell {
+    width: auto !important;
   }
 
   .list-type-4 .cell:first-child,
@@ -5144,37 +5175,22 @@ body.fix-header .toggle-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: auto !important;
-  }
-
-  .list-type-4 .cell:first-child dt,
-  .list-type-4 .cell:last-child dt {
-    position: static;
-    margin: 0;
-    padding-left: 10px;
-    width: auto;
-    height: auto;
-    clip: initial;
-    line-height: 50px;
-    color: #222;
-    font-size: 0.9375rem;
-    background: none;
-    overflow: visible;
-    white-space: nowrap;
-  }
-
-  .list-type-4 .cell:first-child dt::after,
-  .list-type-4 .cell:last-child dt::after {
-    content: ' :\00a0';
   }
 
   .list-type-4 .cell:first-child dd,
   .list-type-4 .cell:last-child dd {
-    padding: 0;
     border: 0;
   }
 
-  .list-type-4 .cell:nth-child(2) dt {
+  .list-type-4 .cell:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    min-width: 0;
+  }
+
+  .list-type-4 .cell dt {
     position: absolute;
     width: 0;
     height: 0;
@@ -5183,17 +5199,24 @@ body.fix-header .toggle-menu {
     z-index: -1;
   }
 
-  .list-type-4 .cell:nth-child(2) dd {
+  .list-type-4 .cell.title {
     border: solid #d9d9d9;
-    border-width: 1px 0 0;
+    border-width: 1px 0;
   }
 
-  .list-type-4 .cell:last-child {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    width: auto;
-    min-width: 0;
+  .list-type-4 dd {
+    padding: 11px 10px;
+    height: auto;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    border: 0 !important;
+  }
+
+  .list-type-4 dd .ellipsis {
+    white-space: normal;
+    text-align: left;
   }
 
   .list-type-5 .cell {
@@ -5402,6 +5425,14 @@ body.fix-header .toggle-menu {
     width: 100%;
   }
 
+  .list-type-4 .date {
+    width: auto;
+  }
+
+  .list-type-4 .date dd {
+    border: 0 !important;
+  }
+
   .board-article .article-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5428,6 +5459,77 @@ body.fix-header .toggle-menu {
   .section-hero.header .title span {
     margin-bottom: 8px;
     font-size: 2.25rem;
+  }
+
+  .section-hero.sub-header .head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .section-hero.sub-header .title {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .section-hero.sub-header .price {
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
+  .section-hero.sub-header .info {
+    margin-bottom: 45px;
+    font-size: 0.875rem;
+  }
+
+  .section-hero.sub-header .actions {
+    left: 20px;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .section-hero.sub-header .actions .btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .section-hero.sub-header.company-detail-header .contact {
+    left: 20px;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.125rem;
+  }
+
+  .fix-header .course-detail-header .head {
+    height: 80px;
+  }
+
+  .fix-header .course-detail-header .title {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.8125rem;
+  }
+
+  .fix-header .course-detail-header .actions {
+    bottom: 50px;
   }
 
   .section-hero.main .content-swiper .wrapper {
@@ -5752,6 +5854,7 @@ body.fix-header .toggle-menu {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     white-space: normal;
+    text-align: left;
     overflow: hidden;
     border: 0;
   }
@@ -5889,6 +5992,10 @@ body.fix-header .toggle-menu {
     margin: 5px 0;
   }
 
+  .page-cs .list-type-4 .date {
+    width: auto;
+  }
+
   .page-cs .faq {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5902,6 +6009,14 @@ body.fix-header .toggle-menu {
 
   .page-cs .faq .faq-title {
     margin-bottom: 20px;
+  }
+
+  .page-my-c-applicant .list-type-4 .date {
+    float: left;
+  }
+
+  .page-my-c-applicant .list-type-4 .application {
+    float: right;
   }
 
   .page-my-c-application .list-type-5 dt br {
@@ -5920,52 +6035,124 @@ body.fix-header .toggle-menu {
     display: block;
   }
 
+  .page-my-c-course .list-type-4 .title {
+    border-top: 0;
+  }
+
+  .page-my-c-course .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-c-course .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-c-course .list-type-4 .date {
+    clear: left;
+    float: left;
+  }
+
+  .page-my-c-course .list-type-4 .action {
+    position: static;
+    clear: right;
+    float: right;
+  }
+
+  .page-my-c-course .list-type-4 .action dd {
+    padding: 8px 10px;
+  }
+
+  .page-my-c-dashboard .list-type-4 .title {
+    border-top: 0;
+  }
+
+  .page-my-c-dashboard .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-c-dashboard .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-c-dashboard .list-type-4 .date {
+    position: static;
+  }
+
+  .page-my-c-dashboard .list-type-4 .date dd {
+    padding-top: 0;
+  }
+
+  .page-my-c-dashboard .list-type-4 .user ~ .title {
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .page-my-c-ended .list-type-4 .title {
+    border-top: 0;
+  }
+
+  .page-my-c-ended .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-c-ended .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-c-ended .list-type-4 .date {
+    clear: left;
+    float: left;
+  }
+
+  .page-my-c-ended .list-type-4 .action {
+    position: static;
+    clear: right;
+    float: right;
+  }
+
+  .page-my-c-ended .list-type-4 .action dd {
+    padding: 8px 10px;
+  }
+
+  .page-my-c-paid .list-type-4 .title {
+    border-top: 0;
+  }
+
+  .page-my-c-paid .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-c-paid .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-c-paid .list-type-4 .date {
+    clear: left;
+    float: left;
+  }
+
+  .page-my-c-paid .list-type-4 .action {
+    position: static;
+    clear: right;
+    float: right;
+  }
+
+  .page-my-c-paid .list-type-4 .action dd {
+    padding: 8px 10px;
+  }
+
   .page-my-c-regist .list-type-4 > li + li {
     margin-top: 10px;
   }
 
   .page-my-c-regist .list-type-4 dd {
     height: auto;
-  }
-
-  .page-my-c-regist .list-type-4 .cell {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .page-my-c-regist .list-type-4 .cell + .cell {
     border-top: 1px solid #d9d9d9;
-  }
-
-  .page-my-c-regist .list-type-4 .cell dt {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    min-width: 110px;
-    line-height: normal;
-    clip: initial;
-    color: #222;
-    font-size: 0.9375rem;
-    background: none;
-    overflow: visible;
-    white-space: nowrap;
-    border-right: 1px solid #d9d9d9;
-    border-left: 0 !important;
-  }
-
-  .page-my-c-regist .list-type-4 .cell dt::after {
-    display: none;
   }
 
   .page-my-c-regist .list-type-4 .cell dd {
@@ -5977,9 +6164,12 @@ body.fix-header .toggle-menu {
     position: static;
   }
 
-  .page-my-c-regist .list-type-4 .condition,
-  .page-my-c-regist .list-type-4 .plans {
-    text-align: left;
+  .page-my-c-regist .list-type-4 .cell:last-child dd {
+    width: 100%;
+  }
+
+  .page-my-c-regist .list-type-4 .service dd {
+    width: 100%;
   }
 
   .page-my-c-regist .load-registed {
@@ -6001,5 +6191,59 @@ body.fix-header .toggle-menu {
 
   .page-my-i-account .list-row .list-column:nth-child(2) .form-row:nth-child(2) {
     height: auto;
+  }
+
+  .page-my-i-applied .list-type-4 .school {
+    max-width: 80%;
+  }
+
+  .page-my-i-applied .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-i-applied .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-i-applied .list-type-4 .date {
+    clear: left;
+    float: left;
+  }
+
+  .page-my-i-applied .list-type-4 .date dd {
+    padding-top: 0;
+  }
+
+  .page-my-i-dashboard .list-type-4 .school {
+    max-width: 80%;
+  }
+
+  .page-my-i-dashboard .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-i-dashboard .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-i-favorite .list-type-4 .school {
+    max-width: 80%;
+  }
+
+  .page-my-i-favorite .list-type-4 .period {
+    float: left;
+  }
+
+  .page-my-i-favorite .list-type-4 .price {
+    float: right;
+  }
+
+  .page-my-i-favorite .list-type-4 .date {
+    clear: left;
+    float: left;
+  }
+
+  .page-my-i-favorite .list-type-4 .date dd {
+    padding-top: 0;
   }
 }
